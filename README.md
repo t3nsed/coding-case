@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Founding Engineer Technical Case
+
+Welcome! This is a 2-hour technical case to evaluate your coding ability and product thinking.
 
 ## Getting Started
 
-First, run the development server:
+**Start by reading `CASE.md` for full instructions.**
+
+### Quick Setup
 
 ```bash
+# Install dependencies
+npm install
+
+# Install AI SDK packages
+npm install ai openai
+
+# Create .env.local and add your API key
+# OPENAI_API_KEY=your_key_here
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) to see the starter code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Your Mission
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build a **Code Review Assistant** - an AI-powered tool that helps developers get instant feedback on their code snippets.
 
-## Learn More
+**Clone the ChatGPT interface** - we want to see your UI taste and attention to detail, along with clean code and solid architecture.
 
-To learn more about Next.js, take a look at the following resources:
+**Time: 2 hours**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See `CASE.md` for:
+- Complete requirements
+- UI/UX expectations
+- Evaluation criteria
+- Technical specifications
+- Tips for success
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- **Next.js 14+** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Vercel AI SDK**
+- **OpenAI** (or Anthropic if you prefer)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Note on Starter Code
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We've provided some basic starter code to help you get going faster. However, **there are intentional bugs and issues** that you'll need to identify and fix as part of the case.
+
+## Questions?
+
+If anything is unclear or you hit a blocker, please reach out to your interviewer!
+
+Good luck! 🚀
