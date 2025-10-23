@@ -2,6 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef, useState } from "react";
+import { MessageBubble } from "@/components/MessageBubble";
 
 export default function Home() {
   const chat = useChat({
@@ -82,26 +83,15 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 py-6 pb-32">
           {messages.length === 0 ? null : (
             <div className="space-y-6">
-              {messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex gap-3 animate-fade-in ${
-                    message.role === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
-                  <div
-                    className={`max-w-[75%] ${
-                      message.role === "user"
-                        ? "bg-gray-100 text-black rounded-3xl px-5 py-3"
-                        : "text-black"
-                    }`}
-                  >
-                    <div className="text-[15px] leading-relaxed whitespace-pre-wrap break-words">
-                      {getMessageText(message)}
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {messages
+                .filter((message) => message.role !== "system")
+                .map((message) => (
+                  <MessageBubble
+                    key={message.id}
+                    role={message.role as "user" | "assistant"}
+                    content={getMessageText(message)}
+                  />
+                ))}
               {isLoading && (
                 <div className="flex gap-3 animate-fade-in">
                   <div className="text-black">

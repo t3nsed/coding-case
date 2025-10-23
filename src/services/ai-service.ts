@@ -10,8 +10,4 @@ export class AIService {
 
 Keep your responses focused and practical.`;
   }
-
-  static formatCodeReviewMessage(code: string): string {
-    return `Please review the following code:\n\n\`\`\`\n${code}\n\`\`\``;
-  }
 }
